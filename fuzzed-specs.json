@@ -1,0 +1,660 @@
+[
+  {
+    "title": "Adds a new blog post - valid #1",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 201,
+      "body": {
+        "title": "POST /posts response",
+        "type": "object",
+        "required": [
+          "_id"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "title": "Adds a new blog post - valid #2",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 10,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 201,
+      "body": {
+        "title": "POST /posts response",
+        "type": "object",
+        "required": [
+          "_id"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "title": "Adds a new blog post - valid #3",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 100,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 201,
+      "body": {
+        "title": "POST /posts response",
+        "type": "object",
+        "required": [
+          "_id"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "title": "Adds a new blog post - valid #4",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1.7976931348623157e+308,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 201,
+      "body": {
+        "title": "POST /posts response",
+        "type": "object",
+        "required": [
+          "_id"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "title": "Adds a new blog post - valid #5",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 201,
+      "body": {
+        "title": "POST /posts response",
+        "type": "object",
+        "required": [
+          "_id"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "title": "Adds a new blog post - valid #6",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 10,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 201,
+      "body": {
+        "title": "POST /posts response",
+        "type": "object",
+        "required": [
+          "_id"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "title": "Adds a new blog post - valid #7",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 100,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 201,
+      "body": {
+        "title": "POST /posts response",
+        "type": "object",
+        "required": [
+          "_id"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "title": "Adds a new blog post - valid #8",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1.7976931348623157e+308,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 201,
+      "body": {
+        "title": "POST /posts response",
+        "type": "object",
+        "required": [
+          "_id"
+        ],
+        "properties": {
+          "_id": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #1",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {},
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #2",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 0,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #3",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": -100,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #4",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": -10,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #5",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": -1,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #6",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #7",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": null,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #8",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": null,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #9",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": null,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #10",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": null,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #11",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": "a",
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #12",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": true,
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #13",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": {},
+      "title": "a",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #14",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "",
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #15",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #16",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": null,
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #17",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": 42,
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #18",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": true,
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #19",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": {},
+      "body": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #20",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "a",
+      "body": ""
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #21",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "a"
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #22",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "a",
+      "body": null
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #23",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "a",
+      "body": 42
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #24",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "a",
+      "body": true
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #25",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "a",
+      "body": {}
+    },
+    "expected": {
+      "status": 400
+    }
+  }
+]

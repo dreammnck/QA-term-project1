@@ -1,0 +1,33 @@
+{
+    "name": "fuzz-testing-rest-api",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "concurrently \"npm run start-db\" \"cross-env DB_CONNECTION=mongodb://127.0.0.1:3001 node-dev index.js\" --kill-others",
+        "start-db": "insta-mongo --db-port=3001 --rest-port=3002 --db=my-test-project --load=many-posts",
+        "test": "jest",
+        "test:watch": "jest --watchAll"
+    },
+    "keywords": [],
+    "author": "ashley@codecapers.com.au",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.19.2",
+        "mongodb": "^6.8.0",
+        "mysql2": "^3.15.3",
+        "uuid": "^13.0.0"
+    },
+    "devDependencies": {
+        "ajv": "^8.17.1",
+        "axios": "^1.7.2",
+        "concurrently": "^8.2.2",
+        "cross-env": "^7.0.3",
+        "fuzzmatic": "^0.0.3",
+        "insta-mongo": "^0.0.6",
+        "jest": "^29.7.0",
+        "node-dev": "^8.0.0",
+        "yaml": "^2.4.5"
+    }
+}

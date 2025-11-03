@@ -1,0 +1,169 @@
+{
+  "valid": [
+    {
+      "userId": 1,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": 10,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": 100,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": 1.7976931348623157e+308,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": 1,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": 10,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": 100,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": 1.7976931348623157e+308,
+      "title": "a",
+      "body": "a"
+    }
+  ],
+  "invalid": [
+    {},
+    {
+      "userId": 0,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": -100,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": -10,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": -1,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": null,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": null,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": null,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": null,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": "a",
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": true,
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": {},
+      "title": "a",
+      "body": "a"
+    },
+    {
+      "userId": 1,
+      "title": "",
+      "body": "a"
+    },
+    {
+      "userId": 1,
+      "body": "a"
+    },
+    {
+      "userId": 1,
+      "title": null,
+      "body": "a"
+    },
+    {
+      "userId": 1,
+      "title": 42,
+      "body": "a"
+    },
+    {
+      "userId": 1,
+      "title": true,
+      "body": "a"
+    },
+    {
+      "userId": 1,
+      "title": {},
+      "body": "a"
+    },
+    {
+      "userId": 1,
+      "title": "a",
+      "body": ""
+    },
+    {
+      "userId": 1,
+      "title": "a"
+    },
+    {
+      "userId": 1,
+      "title": "a",
+      "body": null
+    },
+    {
+      "userId": 1,
+      "title": "a",
+      "body": 42
+    },
+    {
+      "userId": 1,
+      "title": "a",
+      "body": true
+    },
+    {
+      "userId": 1,
+      "title": "a",
+      "body": {}
+    },
+    null,
+    null,
+    42,
+    "a",
+    true
+  ]
+}

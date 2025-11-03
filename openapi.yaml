@@ -1,0 +1,57 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: JSON Placeholder API
+  description: See https://jsonplaceholder.typicode.com/
+paths:
+  /posts:
+    post:
+      description: Adds a new blog post
+      requestBody:
+        required: true
+        content:
+          "application/json":
+            schema:
+              $ref: "#/components/schemas/CreatePostPayload"
+      responses:
+        "201":
+          description: Post created
+          content:
+            "application/json":
+              schema:
+                $ref: "#/components/schemas/CreatePostResponse"
+        "400":
+          description: Failed to create post
+      x-okStatus: 201
+      x-errStatus: 400
+
+components:
+  schemas:
+    CreatePostPayload:
+        title: POST /posts payload
+        type: object
+        required:
+            - userId
+            - title
+            - body
+        properties:
+            userId:
+                type: number
+                minimum: 1
+            title:
+                type: string
+                minLength: 1
+            body:
+                type: string
+                minLength: 1
+        additionalProperties: false
+    CreatePostResponse:
+        title: POST /posts response
+        type: object
+        required:
+            - _id
+        properties:
+            _id:
+                type: string
+        additionalProperties: false
+
