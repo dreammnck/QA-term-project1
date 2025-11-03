@@ -1,8 +1,8 @@
 const { MongoClient, ObjectId } = require("mongodb");
 const express = require("express");
 
-const dbConnection =  "mongodb://127.0.0.1:27017/my-test-project";
-const dbName =  "my-test-project";
+const dbConnection = "mongodb://127.0.0.1:27017/my-test-project";
+const dbName = "my-test-project";
 const port = 3000;
 
 //
@@ -36,7 +36,7 @@ async function startServer(config, db) {
         function validateUserId(value, res) {
             if (typeof value !== "number" || value <= 0) {
                 res.sendStatus(400);
-                return false;                
+                return false;
             }
             return true;
         }
@@ -51,13 +51,13 @@ async function startServer(config, db) {
 
         app.post("/posts", async (req, res) => {
             const { userId, title, body } = req.body;
-            
+
             if (!validateUserId(userId, res) || !validateString(title, res) || !validateString(body, res)) {  // Some very simple validation.
                 return;
             }
 
             const result = await db.collection("posts").insertOne({ userId, title, body });
-            
+
             res.status(201).json({
                 _id: result.insertedId.toString(),
             })
@@ -65,12 +65,12 @@ async function startServer(config, db) {
 
         const server = app.listen(config.port, () => {
             resolve(server);
-        });    
+        });
     });
 }
 
 async function main(config) {
-    
+
     const client = new MongoClient(config.dbConnection);
     await client.connect();
 
