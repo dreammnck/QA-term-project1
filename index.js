@@ -2,7 +2,7 @@ const express = require("express");
 const { v4: uuidv4 } = require("uuid");
 const mysql = require("mysql2/promise");
 const YAML = require("yamljs");
-const swaggerUi = require("swagger-ui-express");  
+const swaggerUi = require("swagger-ui-express");
 const port = 3000;
 
 //
@@ -51,7 +51,7 @@ async function startServer(config) {
         // Simple validation helpers
         //
         function validateUserId(value, res) {
-            if (typeof value !== "number" || value <= 0) {
+            if (typeof value !== "number" || value <= 0 || value >= 10000000) {
                 res.sendStatus(400);
                 return false;
             }

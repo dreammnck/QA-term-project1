@@ -34,7 +34,7 @@ async function startServer(config, db) {
         // Validates a user id (just a number in this simple example).
         //
         function validateUserId(value, res) {
-            if (typeof value !== "number" || value <= 0) {
+            if (typeof value !== "number" || value <= 0 || value > 10000000) {
                 res.sendStatus(400);
                 return false;
             }

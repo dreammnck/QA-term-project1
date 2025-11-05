@@ -98,7 +98,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": 1.7976931348623157e+308,
+      "userId": 10000000,
       "title": "a",
       "body": "a"
     },
@@ -218,7 +218,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": 1.7976931348623157e+308,
+      "userId": 10000000,
       "title": "a",
       "body": "a"
     },
@@ -278,7 +278,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": -100,
+      "userId": 10000001,
       "title": "a",
       "body": "a"
     },
@@ -295,7 +295,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": -10,
+      "userId": -100,
       "title": "a",
       "body": "a"
     },
@@ -312,7 +312,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": -1,
+      "userId": -10,
       "title": "a",
       "body": "a"
     },
@@ -329,6 +329,7 @@
       "Content-Type": "application/json"
     },
     "body": {
+      "userId": -1,
       "title": "a",
       "body": "a"
     },
@@ -345,7 +346,6 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": null,
       "title": "a",
       "body": "a"
     },
@@ -413,7 +413,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": "a",
+      "userId": null,
       "title": "a",
       "body": "a"
     },
@@ -430,7 +430,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": true,
+      "userId": "a",
       "title": "a",
       "body": "a"
     },
@@ -447,7 +447,7 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": {},
+      "userId": true,
       "title": "a",
       "body": "a"
     },
@@ -464,8 +464,8 @@
       "Content-Type": "application/json"
     },
     "body": {
-      "userId": 1,
-      "title": "",
+      "userId": {},
+      "title": "a",
       "body": "a"
     },
     "expected": {
@@ -482,6 +482,7 @@
     },
     "body": {
       "userId": 1,
+      "title": "",
       "body": "a"
     },
     "expected": {
@@ -498,7 +499,6 @@
     },
     "body": {
       "userId": 1,
-      "title": null,
       "body": "a"
     },
     "expected": {
@@ -515,7 +515,7 @@
     },
     "body": {
       "userId": 1,
-      "title": 42,
+      "title": null,
       "body": "a"
     },
     "expected": {
@@ -532,7 +532,7 @@
     },
     "body": {
       "userId": 1,
-      "title": true,
+      "title": 42,
       "body": "a"
     },
     "expected": {
@@ -549,7 +549,7 @@
     },
     "body": {
       "userId": 1,
-      "title": {},
+      "title": true,
       "body": "a"
     },
     "expected": {
@@ -566,8 +566,8 @@
     },
     "body": {
       "userId": 1,
-      "title": "a",
-      "body": ""
+      "title": {},
+      "body": "a"
     },
     "expected": {
       "status": 400
@@ -583,7 +583,8 @@
     },
     "body": {
       "userId": 1,
-      "title": "a"
+      "title": "a",
+      "body": ""
     },
     "expected": {
       "status": 400
@@ -599,8 +600,7 @@
     },
     "body": {
       "userId": 1,
-      "title": "a",
-      "body": null
+      "title": "a"
     },
     "expected": {
       "status": 400
@@ -617,7 +617,7 @@
     "body": {
       "userId": 1,
       "title": "a",
-      "body": 42
+      "body": null
     },
     "expected": {
       "status": 400
@@ -634,7 +634,7 @@
     "body": {
       "userId": 1,
       "title": "a",
-      "body": true
+      "body": 42
     },
     "expected": {
       "status": 400
@@ -642,6 +642,23 @@
   },
   {
     "title": "Adds a new blog post - invalid #25",
+    "fixture": "many-posts",
+    "method": "post",
+    "url": "/posts",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "userId": 1,
+      "title": "a",
+      "body": true
+    },
+    "expected": {
+      "status": 400
+    }
+  },
+  {
+    "title": "Adds a new blog post - invalid #26",
     "fixture": "many-posts",
     "method": "post",
     "url": "/posts",
