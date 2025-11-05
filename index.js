@@ -1,11 +1,14 @@
 const express = require("express");
 const { v4: uuidv4 } = require("uuid");
 const mysql = require("mysql2/promise");
+const YAML = require("yamljs");
+const swaggerUi = require("swagger-ui-express");  
 const port = 3000;
 
 //
 // Starts the express server.
 //
+const swaggerDocument = YAML.load("./openapi.yaml");
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST || "localhost",
@@ -21,6 +24,8 @@ async function startServer(config) {
     return new Promise((resolve) => {
         const app = express();
         app.use(express.json()); // parse JSON requests
+
+        app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
         //
         // GET /posts and /posts/:postId
